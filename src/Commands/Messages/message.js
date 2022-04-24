@@ -75,17 +75,10 @@ module.exports = {
       //embed
       message.channel.send(
         new MessageEmbed()
-          .setAuthor(
-            message.author.tag,
-            message.author.avatarURL({ dynamic: true })
-          )
-          .setFooter(
-            client.config.Embed.footer,
-            client.user.avatarURL({ dynamic: true })
-          )
-          .setDescription(`Showing information of ${member.user.tag}`)
-          .addField(`✉ Messages`, `**${Database.messages}**`, true)
-          .addField(`🎖 Position`, `**${Position + 1 || "Unknown"}**`, true)
+          
+          .setDescription(`${member.user.tag}`)
+          .addField(`Messages Sent`, `**${Database.messages}**`, true)
+          .addField(`Position`, `**${Position + 1 || "Unknown"}**`, true)
           .setColor(message.member.displayColor || client.config.Embed.Color)
       );
     } catch (err) {
