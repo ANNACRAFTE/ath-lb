@@ -64,10 +64,10 @@ class Leaderboard {
 
       //leaderboard embed
       const embed = new MessageEmbed()
-        .setTitle("Top 10 Users With The Most Written Messages In Total")
+        .setTitle("Top 10 Users With The Most Messages Sent In Total")
         .setColor(this.client.config.Embed.Color)
         .setFooter(
-          "Made by SahiL#1337・Next refresh in",
+          "Next Update",
           this.client.user.avatarURL({ dynamic: true })
         )
         .setTimestamp(Date.now() + this.client.config.Leaderboard.interval)
