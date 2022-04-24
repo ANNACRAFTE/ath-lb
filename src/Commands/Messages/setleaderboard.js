@@ -61,13 +61,10 @@ module.exports = {
 
       //leaderboard embed
       const embed = new MessageEmbed()
-        .setAuthor(
-          message.guild.name + "'s messages leaderboard",
-          message.guild.iconURL({ dynamic: true })
-        )
+        .setTitle("Top 10 Users With The Most Messages Sent In Total")
         .setColor(client.config.Embed.Color)
         .setFooter(
-          "Last Update",
+          "Next Update",
           client.user.avatarURL({ dynamic: true })
         )
         .setTimestamp(Date.now() + client.config.Leaderboard.interval)
@@ -127,7 +124,6 @@ module.exports = {
           return message.channel.send(
             new MessageEmbed()
               .setColor(client.config.Embed.Color)
-              .setTimestamp()
               .setDescription(
                 `${
                   client.config.Embed.Succes
