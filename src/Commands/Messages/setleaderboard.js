@@ -67,7 +67,7 @@ module.exports = {
         )
         .setColor(client.config.Embed.Color)
         .setFooter(
-          "Made by SahiL#1337・Next refresh in",
+          "Last Update",
           client.user.avatarURL({ dynamic: true })
         )
         .setTimestamp(Date.now() + client.config.Leaderboard.interval)
@@ -105,20 +105,13 @@ module.exports = {
         await doc.save();
         return message.channel.send(
           new MessageEmbed()
-            .setAuthor(
-              message.author.tag,
-              message.author.avatarURL({ dynamic: true })
-            )
+            
             .setColor(client.config.Embed.Color)
-            .setFooter(
-              client.config.Embed.footer,
-              client.user.avatarURL({ dynamic: true })
-            )
-            .setTimestamp()
+            
             .setDescription(
               `${
                 client.config.Embed.Succes
-              } | **New automated leaderboard channel : ${channel.toString()}**`
+              } The new live leaderboard channel has been set to ${channel.toString()}`
             )
         );
       } else {
@@ -133,20 +126,12 @@ module.exports = {
           await Database.save();
           return message.channel.send(
             new MessageEmbed()
-              .setAuthor(
-                message.author.tag,
-                message.author.avatarURL({ dynamic: true })
-              )
               .setColor(client.config.Embed.Color)
-              .setFooter(
-                client.config.Embed.footer,
-                client.user.avatarURL({ dynamic: true })
-              )
               .setTimestamp()
               .setDescription(
                 `${
                   client.config.Embed.Succes
-                } | **New automated leaderboard channel : ${channel.toString()}**`
+                } The new live leaderboard channel has been set to ${channel.toString()}`
               )
           );
         }
@@ -170,20 +155,12 @@ module.exports = {
         //sending message
         return message.channel.send(
           new MessageEmbed()
-            .setAuthor(
-              message.author.tag,
-              message.author.avatarURL({ dynamic: true })
-            )
+            
             .setColor(client.config.Embed.Color)
-            .setFooter(
-              client.config.Embed.footer,
-              client.user.avatarURL({ dynamic: true })
-            )
-            .setTimestamp()
             .setDescription(
               `${
                 client.config.Embed.Succes
-              } | **New automated leaderboard channel : ${channel.toString()}**`
+              } The new live leaderboard channel has been set to ${channel.toString()}`
             )
         );
       }
