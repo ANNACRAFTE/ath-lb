@@ -110,15 +110,9 @@ module.exports = {
         //embed
         return message.channel.send(
           new MessageEmbed()
-            .setAuthor(
-              message.guild.name + "'s messages leaderboard",
-              message.guild.iconURL({ dynamic: true })
-            )
+         
             .setColor(message.member.displayColor || client.config.Embed.Color)
-            .setFooter(
-              client.config.Embed.footer + " | Page: 1/1",
-              client.user.avatarURL({ dynamic: true })
-            )
+            
             .setImage(
               `https://media.discordapp.net/attachments/612201812262649867/760335107394371624/divider1-1.gif`
             )
@@ -151,18 +145,11 @@ module.exports = {
           //pushing with embed to temp array
           Arr.push(
             new MessageEmbed()
-              .setAuthor(
-                message.guild.name + "'s messages leaderboard",
-                message.guild.iconURL({ dynamic: true })
-              )
-              .setFooter(
-                client.config.Embed.footer,
-                client.user.avatarURL({ dynamic: true })
-              )
+                              
               .setColor(
                 message.member.displayColor || client.config.Embed.Color
               )
-              .setTimestamp()
+              
               .setDescription(description)
               .setImage(
                 `https://media.discordapp.net/attachments/612201812262649867/760335107394371624/divider1-1.gif`
