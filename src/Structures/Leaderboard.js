@@ -64,10 +64,7 @@ class Leaderboard {
 
       //leaderboard embed
       const embed = new MessageEmbed()
-        .setAuthor(
-          Server.name + "'s messages leaderboard",
-          Server.iconURL({ dynamic: true })
-        )
+        .setTitle("Top 10 Users With The Most Written Messages In Total")
         .setColor(this.client.config.Embed.Color)
         .setFooter(
           "Made by SahiL#1337・Next refresh in",
