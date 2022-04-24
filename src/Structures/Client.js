@@ -1,3 +1,14 @@
+const express = require('express');
+
+const app = express();
+
+const port = 3000;
+
+app.get('/', (req, res) => res.send('Zero is sexy'));
+
+app.listen(port, () => console.log(`Bot Listening At http://localhost:${port}, Dm 0_0#6666 Your host link`)); 
+
+
 const chalk = require("chalk");
 const { Client, Collection, Message, TextChannel } = require("discord.js");
 const { loadCommands, loadEvents } = require("../Loader");
