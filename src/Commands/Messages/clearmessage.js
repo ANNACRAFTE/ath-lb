@@ -83,18 +83,11 @@ module.exports = {
         //embed
         return message.channel.send(
           new MessageEmbed()
-            .setAuthor(
-              message.author.tag,
-              message.author.avatarURL({ dynamic: true })
-            )
+            
             .setColor(message.member.displayColor || client.config.Embed.Color)
-            .setTimestamp()
-            .setFooter(
-              client.config.Embed.footer,
-              client.user.avatarURL({ dynamic: true })
-            )
+            
             .setDescription(
-              `${client.config.Embed.Succes} | Cleared messages for **all** users`
+              `${client.config.Embed.Succes} Successfully cleared messages for @everyone`
             )
         );
       }
@@ -144,18 +137,11 @@ module.exports = {
         //sending message
         message.channel.send(
           new MessageEmbed()
-            .setAuthor(
-              message.author.tag,
-              message.author.avatarURL({ dynamic: true })
-            )
+            
             .setColor(message.member.displayColor || client.config.Embed.Color)
-            .setTimestamp()
-            .setFooter(
-              client.config.Embed.footer,
-              client.user.avatarURL({ dynamic: true })
-            )
+            
             .setDescription(
-              `${client.config.Embed.Succes} | Cleared messages for **${member.user.tag}**`
+              `${client.config.Embed.Succes} Sucessfully cleared messages for ${member.user.tag}`
             )
         );
       }
